@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <fieldset>
+        <h1>
+            Contact Us
+        </h1>
+        <div>
+            <h2>Personal Information</h2>
+            <div style="display: flex; align-items: center;">
+                <p>Name: </p> <input type="text">
+            </div>
+            <div style="display: flex; align-items: center;">
+                <p>Email: </p> <input type="text">
+            </div>
+            <div style="display: flex; align-items: center;">
+                <p>Phone: </p> <input type="text">
+            </div>
+            </div>
+        </div>
+        </fieldset>
+    <br>
+<div>
+    <fieldset>
+        <h2>
+            Massage Details
+        </h2>
+        <div style="display: flex; align-items: center;">
+            <p>Subject: </p> <dropdown title="Select Subject">
+                <select>
+                    <option value="select">Select Subject</option>
+                    <option value="general-inquiry">General Inquiry</option>
+                    <option value="booking">Booking</option>
+                    <option value="cancellation">Cancellation</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <p>Priority: </p> 
+            <checkbox>
+                <label><input type="checkbox" name="priority" value="low"> Low</label>
+                <label><input type="checkbox" name="priority" value="medium"> Medium</label>
+                <label><input type="checkbox" name="priority" value="high"> High</label>
+        </div border="1" style="padding: 20px; background-color: #f0f0f0; border-radius: 10px;">
+        <div style="display: flex; align-items: center;">
+            <p>Time: </p> <input type="text">
+        </div>
+        <div>
+            <p>Message: </p>
+            <textarea rows="4" cols="50" placeholder="Type your message here..."></textarea>
+        </div>
+    </fieldset>
+</div>
+    <br>
+    <div>
+        <fieldset>
+            <div>
+            <h2>Preferences</h2>
+            </div>
+                <form>
+                    <checkbox>
+                        <input type="checkbox" name="preferences" value="newsletter"> Subscribe to newsletter
+                    </checkbox>
+                    <br>
+                    <span style="display: inline;">
+                    <p>Contact Method:
+                        <select name="contact-method">
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="chat">Chat</option>
+                        </select>
+                    </p>
+                </form>
+    </div>
+    </fieldset>
+</body>
+
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
