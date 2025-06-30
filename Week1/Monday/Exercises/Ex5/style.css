@@ -1,0 +1,29 @@
+table {
+  background-color: lightgreen;
+  border: 1px solid black;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 20px;
+}
+td {
+  padding: 10px;
+}
+
+tr {
+  border-bottom: 1px solid black;
+  margin: 30px;
+}
+
+tr:first-child {
+  background-color: lightgray;
+}
+
+tr > td:nth-child(2),
+tr > td:nth-child(8) {
+  font-weight: bold;
+}
+
+tr > td:nth-child(2) {
+  text-align: left;
+  width: 100px;
+}
