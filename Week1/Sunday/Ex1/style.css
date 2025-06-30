@@ -1,0 +1,23 @@
+h1 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  margin-bottom: -7px;
+}
+
+.head-line {
+  background-color: blue;
+  height: 1px;
+}
+
+.purple-class {
+  color: purple;
+  font-weight: bold;
+}
+
+.green-class {
+  color: green;
+}
