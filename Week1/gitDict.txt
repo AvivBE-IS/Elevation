@@ -1,0 +1,7 @@
+git init
+ls -a
+git status
+git add
+git commit -m <str>
+git log
+git add .
