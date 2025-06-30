@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+  background-color: rgb(4, 75, 113);
+}
+* {
+  margin-left: 10px;
+}
+h1 {
+  color: rgb(231, 213, 10);
+  text-align: center;
+}
+
+.title-container {
+  color: rgb(231, 10, 10);
+}
+
+hr {
+  height: 1px;
+  background-color: rgb(231, 10, 10);
+  border: none;
+  margin-top: -17px;
+}
+
+h3 {
+  color: rgb(91, 143, 222);
+}
+p {
+  color: rgb(254, 254, 254);
+}
+.yellow {
+  color: rgb(231, 213, 10);
+  font-weight: bold;
+}
+
+.image-container {
+  display: inline-block;
+  text-align: left;
+  margin: 5px;
+  margin-left: 20px;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+a {
+  color: rgb(10, 231, 154);
+  text-decoration: none;
+}
+
+.white-me {
+  color: white;
+}
+#top {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding-left: 85%;
+}
+.contact-info {
+  background-color: rgb(16, 108, 158);
+  border-radius: 6px;
+  padding-top: 10px;
+}

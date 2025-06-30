@@ -1,0 +1,50 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(2, 28, 39);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: rgb(10, 225, 118);
+  text-align: center;
+}
+
+.description {
+  color: rgb(225, 254, 6);
+  text-align: left;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(110, 109, 109, 0.507);
+  border: 3px solid rgb(10, 225, 118);
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid;
+}
+
+th {
+  color: rgb(10, 225, 118);
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(110, 109, 109, 0.507);
+}
+
+.note {
+  color: rgb(158, 158, 157);
+  font-size: 0.7em;
+  margin-top: 20px;
+  text-align: left;
+}
