@@ -1,0 +1,21 @@
+.container {
+  color: rgb(5, 152, 237);
+  font-family: "Courier New", Courier, monospace;
+}
+
+fieldset {
+  border: 2px solid rgb(5, 152, 237);
+  padding: 20px;
+  margin: 20px;
+}
+
+div {
+  background-color: gray(255, 255, 255);
+  border-radius: 10px;
+}
+
+.title-div {
+  text-align: center;
+  color: rgb(5, 152, 237);
+  background-color: rgb(255, 255, 255);
+}
