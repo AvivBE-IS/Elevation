@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(220, 197, 166);
+}
+h1 {
+    color: orangered;
+    text-align: center;
+}
+
+ul, ol {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li {
+    color: orangered;
+    font-weight: bold;
+}
+h2 {
+    color: blue;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+
+}
+
+.blue-container {
+    background-color: rgb(154, 154, 245);
+    margin-left: 5px;
+    
+}
+
+ul > ul > li {
+    color: black;
+    font-weight: normal;
+}
+p{
+    font-style: italic
+}
