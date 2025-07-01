@@ -1,0 +1,10 @@
+.container {
+  height: 80px;
+  background-color: rgb(239, 108, 112);
+}
+
+.inside {
+  height: 80px;
+  width: 90%;
+  background-color: rgb(255, 182, 193);
+}

@@ -1,0 +1,18 @@
+.container {
+  width: 40%;
+  height: 80px;
+  margin: 0 auto; /* center the container */
+  display: flex;
+  border: 2px solid purple;
+}
+
+.section {
+  flex: 1;
+  background-color: pink;
+  border: 2px solid black;
+}
+.box {
+  width: 33%;
+  height: 100px;
+  border: 2px solid, black;
+}
