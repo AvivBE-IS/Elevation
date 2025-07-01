@@ -1,0 +1,67 @@
+#parent {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+#child1 {
+  width: 33%;
+  height: 33%;
+  background-color: blue;
+  right: 0;
+}
+
+#child2 {
+  width: 33%;
+  height: 33%;
+  background-color: green;
+  position: absolute;
+  left: 67%;
+  top: 0;
+}
+#child3 {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  top: 67%;
+  left: 0;
+
+  background-color: purple;
+}
+#child4 {
+  position: absolute;
+  width: 33%;
+  height: 33%;
+  background-color: yellow;
+  left: 67%;
+  top: 67%;
+}
+#child5 {
+  position: absolute;
+  width: 34%;
+  height: 34%;
+  background-color: white;
+  left: 33%;
+  top: 33%;
+}
+
+/*  {
+    margin : 0;
+    padding: 0;
+
+}
+
+ .flex-container {
+  display: flex;
+  border: solid;
+}
+
+.flex-container > * {
+  border: solid orange;
+}
+
+boddy{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
