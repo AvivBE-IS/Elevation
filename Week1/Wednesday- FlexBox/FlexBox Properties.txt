@@ -1,0 +1,26 @@
+justify-content: flex-start (default) flex-end center space-between space-around space-evenly.
+flex-start: פריטים מיושרים לצד השמאלי של הקונטיינר.
+flex-end: פריטים מיושרים לצד הימני של הקונטיינר.
+center: פריטים מיושרים למרכז של הקונטיינר.
+space-between: פריטים מוצגים עם מרווחים שווים בינהם.
+space-around: פריטים מוצגים עם מרווחים שווים מסביבם.
+
+align-items\ align content:flex-start flex-end center baseline, stretch (default).
+flex-start: יישור הפריטים לחלק העליון של הקונטיינר.
+flex-end: יישור פריטים לחלק התחתון של הקונטיינר.
+center: יישור פריטים לאמצע הקו האנכי של הקונטיינר.
+baseline: הפריטים יוצגו בקו הבסיס של הקונטיינר.
+stretch: הפריטים יימתחו כדי להתאים לקונטיינר.
+
+flex-direction: row (default) row-reverse column column-reverse.
+row: פריטים מסודרים כמו בכיוון שהוגדר לטקסט.
+row-reverse: פריטים מסודרים ההפך מהכיוון שהוגדר לטקסט.
+column: פריטים מסודרים מלמעלה למטה (בעמודה).
+column-reverse: פריטים מסודרים מלמטה למעלה (בעמודה).
+
+order
+
+flex-wrap: nowrap (default) wrap wrap-reverse.
+nowrap: כל פריט מותאם לשורה אחת.
+wrap: פריטים "נעטפים" (מתפזרים) כל גבי כמה שורות.
+wrap-reverse: פריטים "נעטפים" (מתפזרים) על גבי כמה שורות בסדר הפוך.
