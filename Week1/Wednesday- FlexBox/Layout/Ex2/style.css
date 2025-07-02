@@ -1,0 +1,31 @@
+.container {
+  background-color: rgb(170, 174, 177);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-div {
+  background-color: rgb(107, 106, 205);
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 20vw; /* 20% of the viewport width */
+  /* flex-wrap: wrap; allow wrapping if really tight */
+}
+.main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  border-radius: 15px;
+}
+
+.main > p {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
