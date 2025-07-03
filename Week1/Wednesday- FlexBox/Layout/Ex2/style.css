@@ -8,9 +8,11 @@
 .nav-div {
   background-color: rgb(107, 106, 205);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 30px;
   width: 100%;
-  gap: 20vw; /* 20% of the viewport width */
+  gap: 10vw; /* 20% of the viewport width */
   /* flex-wrap: wrap; allow wrapping if really tight */
 }
 .main {
@@ -19,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 90%;
+
   border-radius: 15px;
 }
 
@@ -28,4 +31,22 @@
 a {
   text-decoration: none;
   color: black;
+  padding: 1vw;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #ddd;
+  padding: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.36);
+  display: none;
+}
+
+.dropdown:hover > .dropdown-content {
+  display: initial;
 }
