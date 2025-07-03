@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="contact-form">
+        <h2>Contact Form</h2>
+        <p>Get in touch with us</p>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic</option>
+              <option value="support">Support</option>
+              <option value="sales">Sales</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us how we can help..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Contact Preferences</label>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="updates" /> Email Updates</label
+            >
+            <label
+              ><input type="checkbox" name="phone" /> Phone Follow-up</label
+            >
+            <label
+              ><input type="checkbox" name="newsletter" /> Newsletter</label
+            >
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="secondary">Save Draft</button>
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
