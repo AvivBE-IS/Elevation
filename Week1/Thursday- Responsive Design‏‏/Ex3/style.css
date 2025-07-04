@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 96%;
+  height: 90%;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  max-width: 24%;
+  max-height: 20%;
+  min-width: 24%;
+  max-width: 20%;
+}
+
+img {
+  width: 90%;
+  border: 0.001vw solid;
+  padding: 1vw;
+}
+
+/* desktop */
+@media (min-width: 900px) {
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+  img {
+    width: 47%; /*50% doesn't fit beacouse the border */
+  }
+}
+
+/* phone */
+@media (max-width: 601px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+img {
+  max-width: 15vw;
+  max-height: 15vw;
+  min-width: 15vw;
+  min-height: 15vw;
+  border: 1px solid;
+  padding: 1vw;
+} */
