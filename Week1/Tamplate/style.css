@@ -17,3 +17,15 @@ boddy {
   display: flex;
   flex-direction: column;
 }
+
+/* desktop */
+@media (min-width: 900px) {
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+}
+
+/* phone */
+@media (max-width: 601px) {
+}

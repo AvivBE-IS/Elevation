@@ -20,28 +20,28 @@
 .whiteDiv {
   background-color: white;
   border-radius: 20px;
-  width: 60%;
-  height: 100%;
+  width: 60vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .price {
   color: red;
   display: inline;
-  font-size: 1.5em;
+  font-size: 3vw;
   /* margin-bottom: 20%; */
   /* width: 50%; */
 }
 
 .description {
   color: rgb(129, 129, 129);
-  font-size: 1.5em;
-  margin-bottom: 10%;
-  margin-top: -10%;
+  font-size: 2vw;
+  margin-bottom: 10vh;
+  margin-top: 3vh;
   text-align: justify;
 }
 
@@ -49,32 +49,68 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10%;
+  /* margin-bottom: 2vh; */
 }
 
 .premim_laptop {
-  padding: 10%;
-  font-size: 4em;
-  /* text-align: left; */
+  font-size: 5vw;
+  padding-top: 4vh;
 }
 
 .add-to-cart-btn {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
-  width: 8em;
-  height: 2.5em;
+  width: 20vw;
+  height: 5vw;
   border-radius: 8px;
   border: none;
   color: white;
-  font-size: 1.3em;
+  margin-bottom: 1vh;
+  font-size: 3vh;
 }
 
 .circle {
-  width: 12%;
-  height: 21%;
+  width: 10vw;
+  height: 10vw;
   background-color: white;
-  border-radius: 100%;
-  opacity: 0.5; /* 0 = fully transparent, 1 = fully opaque */
+  border-radius: 50%;
+  opacity: 0.8; /* 0 = fully transparent, 1 = fully opaque */
   margin: 15%;
   display: flex;
   justify-content: center;
+}
+.camera-icon {
+  width: 100%;
+  height: 100%;
+}
+/* tablet */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+/* phone */
+@media (max-width: 600px) {
+  .whiteDiv {
+    width: 100vw;
+    align-items: center;
+  }
+
+  .price-and-button-div {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .price {
+    width: 100vw;
+    margin-top: 1vh;
+    text-align: center;
+  }
+  .description {
+    font-size: 4vh;
+  }
+
+  .add-to-cart-btn {
+    font-size: 2vh;
+  }
 }
