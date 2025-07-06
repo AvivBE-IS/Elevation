@@ -1,0 +1,29 @@
+body {
+  padding: 0px;
+  font-family: sans-serif;
+  list-style: none;
+}
+
+.box {
+  background-color: #fff;
+  display: block;
+  height: 8px;
+  border: 5px solid blue;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box span {
+  height: 12px;
+  float: left;
+  background-color: black;
+}
+
+.javascript,
+.react,
+.nodejs,
+.nodejs,
+.mongodb {
+  width: 90%;
+  animation: 2s;
+}
