@@ -1,7 +1,27 @@
+* {
+  font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
 body {
-  padding: 0px;
-  font-family: sans-serif;
-  list-style: none;
+  padding: 0;
+  font-size: 1rem; /* 16px by default */
+  line-height: 1.6; /* 1.6 × 16px = 25.6px line spacing */
 }
 
 ul {
@@ -11,19 +31,22 @@ ul {
 
 .header-div {
   background-color: rgb(230, 235, 241);
+  display: flex;
+  background: linear-gradient(to right, #fafafa, #cccccc);
+  padding: 4rem 0;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* separates left & right */
-  padding: 2vh 2vh;
+  justify-content: space-between;
+  padding: 2rem;
   background-color: white;
 }
 
 .left-nav,
 .right-nav {
   display: flex;
-  gap: 2vw;
+  gap: 2rem;
 }
 
 .right-nav a {
@@ -46,16 +69,14 @@ ul {
   border-radius: 7px;
   border: none;
 }
+.get-in-touch-btn:hover {
+  cursor: pointer;
+}
 
 .right-nav {
   justify-content: flex-end;
 }
 
-.header-div {
-  display: flex;
-  background: linear-gradient(to right, #fafafa, #cccccc);
-  padding: 5vw;
-}
 .left-header {
   display: flex;
   flex-direction: column;
@@ -66,7 +87,7 @@ ul {
   justify-content: end;
   min-width: 30vw;
   align-items: center;
-  padding: 5vw;
+  padding: 4rem;
 }
 
 .professional-photo {
@@ -74,10 +95,11 @@ ul {
   border-radius: 50%;
   width: 30vw;
 }
+
 main {
   display: flex;
   justify-content: space-between;
-  margin: 5vw;
+  margin: 4rem;
 }
 
 .right-main {
@@ -87,7 +109,7 @@ main {
 }
 
 .left-main {
-  padding: 5vw;
+  padding: 4rem;
 }
 
 .box {
@@ -108,7 +130,6 @@ main {
 .javascript,
 .react,
 .nodejs,
-.nodejs,
 .mongodb {
   width: 90%;
   animation: 2s;
@@ -117,46 +138,42 @@ main {
 section {
   display: flex;
   flex-direction: column;
+  padding: 4rem 0;
 }
 
 .div_of_divs {
   display: flex;
-
-  /* justify-content: space-between; */
-  /* margin: 5vw; */
 }
 
 .project-div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-content: flex-start; */
   align-items: flex-start;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* semi-transparent black shadow */
-  border-radius: 3vw;
-  margin: 5vw;
-  padding-bottom: 2vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+  margin: 2rem;
+  padding-bottom: 2rem;
   width: 30vw;
 }
 
 .project-img {
-  border-top-left-radius: 3vw;
-  border-top-right-radius: 3vw;
-  width: 23vw;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
   max-height: 30vh;
 }
 
 .project-div > h3,
 .project-div > button,
 .project-div > p {
-  margin: 0.5vw;
-  margin-left: 1vw;
+  margin: 1rem 0 1rem 1rem;
 }
 
 .view-project-btn {
   background-color: gold;
   border: none;
-  border-radius: 0.7vw;
+  border-radius: 1rem;
   height: 6vh;
 }
 
@@ -164,20 +181,19 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 8vw;
+  padding: 4rem 0;
+  margin: 0;
 }
+
 .div-footer {
   background-color: rgb(30, 41, 59);
   color: white;
   text-align: center;
-  margin: 5vh;
+  margin: 4rem 0;
   align-content: center;
   height: 12vh;
 }
-.section-bottom {
-  display: flex;
-  justify-content: space-around;
-}
+
 section > form {
   display: flex;
   flex-direction: column;
@@ -192,7 +208,7 @@ textarea {
 section > form p,
 section > form input,
 section > form button {
-  margin: 0.3rem 0;
+  margin: 1rem 0;
 }
 
 section > form button {
@@ -200,26 +216,29 @@ section > form button {
   background-color: blue;
   color: white;
   border: none;
-  border-radius: 5vw;
+  border-radius: 5rem;
   min-height: 8vh;
   font-weight: bolder;
 }
 
 .my-project-title {
-  padding-left: 5vw;
+  padding-left: 4rem;
 }
+
 .personal-details {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 7vh;
+  gap: 4rem;
   min-width: 30vw;
-  margin-top: 10vh;
+  margin-top: 4rem;
 }
+
 .icon-text {
   display: flex;
-  gap: 0.5vw;
+  gap: 0.5rem;
 }
+
 .icon-text > p {
   margin: 0;
 }
@@ -228,4 +247,12 @@ section > form button {
   display: flex;
   justify-content: space-between;
   width: 11vw;
+}
+.fab {
+  transition: transform 0.3s ease;
+}
+
+.fab:hover {
+  transform: scale(1.3);
+  cursor: pointer;
 }
