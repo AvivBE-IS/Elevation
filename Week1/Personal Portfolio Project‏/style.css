@@ -1,0 +1,61 @@
+body {
+  padding: 0px;
+  font-family: sans-serif;
+  list-style: none;
+}
+
+.header-div {
+  background-color: rgb(230, 235, 241);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* separates left & right */
+  padding: 2vh 2vh;
+  background-color: white;
+}
+
+.left-nav,
+.right-nav {
+  display: flex;
+  gap: 2vw;
+}
+
+.right-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.left-nav a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+.right-nav {
+  justify-content: flex-end;
+}
+
+.box {
+  background-color: #fff;
+  display: block;
+  height: 8px;
+  border: 5px solid blue;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box span {
+  height: 12px;
+  float: left;
+  background-color: black;
+}
+
+.javascript,
+.react,
+.nodejs,
+.nodejs,
+.mongodb {
+  width: 90%;
+  animation: 2s;
+}
