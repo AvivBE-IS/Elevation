@@ -21,28 +21,39 @@
       </nav>
       <header>
         <div class="header-div">
-          <h1>Full-Stack Developer</h1>
-          <p>
-            I create beautiful and functional web experiences using modern
-            technologies. Passionate about clean code and user-centered design.
-          </p>
-          <button>Get In Touch</button>
-          <img src="" alt="Personal Photo" />
+          <div class="left-header">
+            <h1>Full-Stack Developer</h1>
+            <p>
+              I create beautiful and functional web experiences using modern
+              technologies. Passionate about clean code and user-centered
+              design.
+            </p>
+            <button class="get-in-touch-btn">Get In Touch</button>
+          </div>
+          <div class="right-header">
+            <img
+              class="professional-photo"
+              src="./Images/Bird.jpeg"
+              alt="Professional Photo"
+            />
+          </div>
         </div>
       </header>
       <main>
-        <h2>About Me</h2>
-        <p>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. All
-          the Lorem Ipsum generators on the Internet tend to repeat predefined
-          chunks as necessary, making this the first true generator on the
-          Internet.
-        </p>
-        <div>
+        <div class="left-main">
+          <h2>About Me</h2>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum, you
+            need to be sure there isn't anything embarrassing hidden in the
+            middle of text. All the Lorem Ipsum generators on the Internet tend
+            to repeat predefined chunks as necessary, making this the first true
+            generator on the Internet.
+          </p>
+        </div>
+        <div class="right-main">
           <h3>Skills</h3>
           <ul>
             <li>
@@ -65,33 +76,66 @@
         </div>
       </main>
       <section>
-        <h2>My Projects</h2>
-        <div>
-          <img src="" alt="project Img" />
-          <h3>Project Name</h3>
-          <button>View Project</button>
+        <div class="project-title-div">
+          <h2 class="my-project-title">My Projects</h2>
         </div>
-        <div>
-          <img src="" alt="project Img" />
-          <h3>Project Name</h3>
-          <button>View Project</button>
+        <div class="div_of_divs">
+          <div class="project-div">
+            <img
+              class="project-img"
+              src="./Images/blueMan.jpeg"
+              alt="project Img"
+            />
+            <h3>Project Name</h3>
+            <p>Description</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+          <div class="project-div">
+            <img
+              class="project-img"
+              src="./Images/thinking.jpeg"
+              alt="project Img"
+            />
+            <h3>Project Name</h3>
+            <p>Description</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
+          <div class="project-div">
+            <img
+              class="project-img"
+              src="./Images/view.jpeg"
+              alt="project Img"
+            />
+            <h3>Project Name</h3>
+            <p>Description</p>
+            <button class="view-project-btn">View Project</button>
+          </div>
         </div>
-        <div>
-          <img src="" alt="project Img" />
-          <h3>Project Name</h3>
-          <button>View Project</button>
+      </section>
+      <section class="section-bottom">
+        <form action="">
+          <h2>Get In Touch</h2>
+
+          <p>Name</p>
+          <input type="text" id="name" name="name" />
+          <p>Email</p>
+          <input type="email" id="email" name="email" />
+          <p>Message</p>
+          <input type="text" id="message" name="message" />
+          <button>Send Message</button>
+        </form>
+        <div class="personal-details">
+          <h3>Contact Information</h3>
+
+          <p>AvivBE95@gmail.com</p>
+          <p>054-5737804</p>
+          <p>Tel Aviv, Israel</p>
         </div>
       </section>
       <footer>
-        <h2>Get In Touch</h2>
-        <p>Name</p>
-        <p>Email</p>
-        <p>Message</p>
-        <h3>Contact Information</h3>
-
-        <p>AvivBE95@gmail.com</p>
-        <p>054-5737804</p>
-        <p>Tel Aviv, Israel</p>
+        <div class="div-footer">
+          <p class="rights">© 2025 All rights reserved</p>
+        </div>
       </footer>
     </div>
   </body>

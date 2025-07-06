@@ -4,6 +4,11 @@ body {
   list-style: none;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .header-div {
   background-color: rgb(230, 235, 241);
 }
@@ -32,8 +37,57 @@ body {
   font-weight: bold;
 }
 
+.get-in-touch-btn {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  max-width: 25vw;
+  min-height: 7vh;
+  border-radius: 7px;
+  border: none;
+}
+
 .right-nav {
   justify-content: flex-end;
+}
+
+.header-div {
+  display: flex;
+  background: linear-gradient(to right, #fafafa, #cccccc);
+  padding: 5vw;
+}
+.left-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-header {
+  display: flex;
+  justify-content: end;
+  min-width: 30vw;
+  align-items: center;
+  padding: 5vw;
+}
+
+.professional-photo {
+  background-color: aquamarine;
+  border-radius: 50%;
+  width: 30vw;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vw;
+}
+
+.right-main {
+  min-width: 25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-main {
+  padding: 5vw;
 }
 
 .box {
@@ -58,4 +112,69 @@ body {
 .mongodb {
   width: 90%;
   animation: 2s;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.div_of_divs {
+  display: flex;
+
+  /* justify-content: space-between; */
+  /* margin: 5vw; */
+}
+
+.project-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-content: flex-start; */
+  align-items: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* semi-transparent black shadow */
+  border-radius: 3vw;
+  margin: 5vw;
+  padding-bottom: 2vw;
+  width: 30vw;
+}
+
+.project-img {
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  width: 23vw;
+  max-height: 30vh;
+}
+
+.project-div > h3,
+.project-div > button,
+.project-div > p {
+  margin: 0.5vw;
+  margin-left: 1vw;
+}
+
+.view-project-btn {
+  background-color: gold;
+  border: none;
+  border-radius: 0.7vw;
+  height: 6vh;
+}
+
+.section-bottom {
+  display: flex;
+  flex-direction: row;
+}
+.div-footer {
+  background-color: rgb(30, 41, 59);
+  color: white;
+  text-align: center;
+  margin: 5vh;
+  align-content: center;
+  height: 12vh;
+}
+
+section > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
