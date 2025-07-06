@@ -163,6 +163,8 @@ section {
 .section-bottom {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  margin: 8vw;
 }
 .div-footer {
   background-color: rgb(30, 41, 59);
@@ -172,9 +174,58 @@ section {
   align-content: center;
   height: 12vh;
 }
-
+.section-bottom {
+  display: flex;
+  justify-content: space-around;
+}
 section > form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-width: 70vw;
+}
+
+input,
+textarea {
+  width: 60vw;
+}
+
+section > form p,
+section > form input,
+section > form button {
+  margin: 0.3rem 0;
+}
+
+section > form button {
+  width: 20vw;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5vw;
+  min-height: 8vh;
+  font-weight: bolder;
+}
+
+.my-project-title {
+  padding-left: 5vw;
+}
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 7vh;
+  min-width: 30vw;
+  margin-top: 10vh;
+}
+.icon-text {
+  display: flex;
+  gap: 0.5vw;
+}
+.icon-text > p {
+  margin: 0;
+}
+
+.social-div {
+  display: flex;
+  justify-content: space-between;
+  width: 11vw;
 }
