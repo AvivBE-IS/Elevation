@@ -153,9 +153,10 @@ section {
   align-items: flex-start;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
-  margin: 2rem;
-  padding-bottom: 2rem;
-  width: 30vw;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
 }
 
 .project-img {
@@ -388,5 +389,74 @@ section > form button {
 
   .mongodb {
     width: 80%;
+  }
+
+  .my-project-title {
+    text-align: center;
+    font-size: 13vh;
+  }
+
+  .div_of_divs {
+    flex-direction: column;
+  }
+  .project-div {
+    width: 100vh;
+    font-size: 6vh;
+  }
+  .project-div > h3 {
+    font-size: 8vw;
+  }
+
+  .project-div > button {
+    width: 70%;
+    height: 8vh;
+  }
+
+  .view-project-btn {
+    align-self: center;
+  }
+  .section-bottom {
+    flex-direction: column;
+  }
+  .section-bottom > form > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-bottom > form > p {
+    margin: 0;
+    margin-top: 6vw;
+  }
+  .section-bottom > form > input {
+    margin: 0;
+  }
+  .get-in-touch-title {
+    margin: 0;
+  }
+  .section-bottom > form > button {
+    width: 85%;
+    align-self: center;
+  }
+  .personal-details {
+    align-items: center;
+  }
+
+  .personal-details > div {
+    height: 0;
+  }
+  .personal-details > h3 {
+    margin: 0;
+  }
+
+  .icon-text {
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .personal-details > div {
+    height: 0.1vh;
+    gap: 0rem;
+    min-width: 30vw;
+    margin-top: 0;
   }
 }
