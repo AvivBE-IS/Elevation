@@ -449,9 +449,6 @@ section > form button {
     align-items: center;
   }
 
-  .personal-details > div {
-    height: 0;
-  }
   .personal-details > h3 {
     margin: 0;
   }
@@ -467,4 +464,8 @@ section > form button {
     min-width: 30vw;
     margin-top: 0;
   }
+}
+
+.view-project-btn:hover {
+  cursor: pointer;
 }
