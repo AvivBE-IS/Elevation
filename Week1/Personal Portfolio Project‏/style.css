@@ -4,14 +4,17 @@
 
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -39,7 +42,7 @@ ul {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
 }
 
@@ -99,7 +102,7 @@ ul {
 main {
   display: flex;
   justify-content: space-between;
-  margin: 4rem;
+  margin: 2rem;
 }
 
 .right-main {
@@ -109,7 +112,11 @@ main {
 }
 
 .left-main {
-  padding: 4rem;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-right: 2vw;
 }
 
 .box {
@@ -139,11 +146,12 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .div_of_divs {
   display: flex;
+  background: linear-gradient(to right, #fafafa, #cccccc);
 }
 
 .project-div {
@@ -153,7 +161,7 @@ section {
   align-items: flex-start;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1.5rem;
   width: 100%;
   max-width: 400px;
