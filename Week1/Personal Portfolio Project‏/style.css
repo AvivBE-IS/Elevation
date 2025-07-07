@@ -116,7 +116,6 @@ main {
   background-color: #fff;
   display: block;
   height: 8px;
-  border: 5px solid blue;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -124,15 +123,17 @@ main {
 .box span {
   height: 12px;
   float: left;
-  background-color: black;
+  background-color: rgb(80, 130, 239);
 }
 
 .javascript,
-.react,
-.nodejs,
-.mongodb {
-  width: 90%;
-  animation: 2s;
+.nodejs {
+  width: 85%;
+}
+
+.mongodb,
+.react {
+  width: 95%;
 }
 
 section {
@@ -255,4 +256,137 @@ section > form button {
 .fab:hover {
   transform: scale(1.3);
   cursor: pointer;
+}
+.hamburger {
+  display: none;
+}
+/* Phone Version */
+@media (max-width: 600px) {
+  .right-nav > a {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    border: none;
+    background-color: white;
+    font-size: xx-large;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .navbar {
+    width: 85vw;
+  }
+
+  .my-name {
+    font-size: xx-large;
+  }
+
+  .right-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-header {
+    text-align: center;
+  }
+
+  .right-header {
+    justify-content: center;
+  }
+  .left-header > a > button {
+    height: 15vh;
+    width: 30vw;
+  }
+
+  .right-header > img {
+    width: 65vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-main {
+    text-align: center;
+    width: 100vh;
+  }
+
+  .right-main > h3 {
+    text-align: center;
+  }
+
+  .right-main {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .right-main h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .right-main ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .right-main ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .right-main ul li p {
+    margin: 0;
+    width: 100px;
+    font-weight: 500;
+    color: #1a202c;
+  }
+
+  .box {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 12px;
+    background-color: #e2e8f0; /* light gray */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .box span {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #2563eb; /* blue */
+    border-radius: 10px;
+  }
+
+  /* Individual skill levels */
+  .javascript {
+    width: 90%;
+  }
+
+  .react {
+    width: 85%;
+  }
+
+  .nodejs {
+    width: 75%;
+  }
+
+  .mongodb {
+    width: 80%;
+  }
 }
