@@ -257,9 +257,27 @@ section > form button {
   display: flex;
   justify-content: space-between;
   width: 11vw;
+  align-items: center;
 }
 .fab {
   transition: transform 0.3s ease;
+}
+
+.icon-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2563eb;
+  width: 20vw;
+  height: 10vw;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 1vw;
+}
+
+.icon-container i {
+  color: white;
+  font-size: 5vw;
 }
 
 .fab:hover {
