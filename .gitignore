@@ -1,0 +1,5 @@
+# Node.js dependencies
+node_modules/
+
+# Optional: OS-specific junk
+.DS_Store

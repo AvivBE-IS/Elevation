@@ -1,0 +1,15 @@
+git init
+ls -a
+git status
+git add
+git commit -m <str>
+git log
+git add .
+git remote add origin <YOUR_URL>
+git push origin master
+git diff
+git remote -v (the url's repo)
+git checkout -b server-backup (opening a new branch- don't work on master)
+git push origin
+git branch
+git pull origin master
