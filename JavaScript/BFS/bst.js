@@ -18,6 +18,25 @@ class BSNode {
       this.rightChild = new BSNode(newVal);
     }
   }
+  findNode(value) {
+    if (this.value === value) return true;
+    if (this.value > value && this.leftChild)
+      return this.leftChild.findNode(value);
+    if (this.value < value && this.rightChild)
+      return this.rightChild.findNode(value);
+
+    return false;
+  }
+  //   findNode(value){
+  //     do
+  //     {
+  //         if(this.value === value) return true;
+  //         if( this.value > value && this.leftChild) return this.findNode(this.leftChild);
+  //         if(this.value < value && this.rightChild) return this.findNode(this.rightChild);
+  //     }
+  //     while(!this.leftChild || this.rightChild)
+  //     return false;
+  //   }
 }
 let tree = new BSNode("H");
 tree.insertNode("E");
