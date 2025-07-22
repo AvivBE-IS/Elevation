@@ -1,5 +1,22 @@
 const prompt = require("prompt-sync")();
 
+class Node {
+  constructor(letter, endOfWord = false) {
+    this.letter = letter;
+    this.endOfWord = endOfWord;
+    this.childs = {};
+  }
+
+  addChild(child) {
+    letter = child.letter;
+    this.childs[letter] = child;
+  }
+
+  getChild(letter) {
+    return this.childs[letter];
+  }
+}
+
 function commandsPrinting() {
   console.log("Commands");
   console.log("add <word>        - Add word to dictionary");
@@ -8,6 +25,9 @@ function commandsPrinting() {
   console.log("help              - Show this message");
   console.log("exit              - Quit program");
 }
+
+const parent = new Node();
+//onst node = new Node('e', true);
 
 while (true) {
   let command = prompt(
