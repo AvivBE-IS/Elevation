@@ -33,6 +33,7 @@ class Node {
       current = current.childs[letter];
     }
     current.endOfWord = true; // Marking the last letter
+    console.log(`Added ${word} to dictionary`);
   }
 }
 
@@ -47,20 +48,30 @@ function commandsPrinting() {
 
 const parent = new Node();
 parent.addWord("cat");
-
-while (command !== "exit") {
-  let command = prompt(
-    "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit): "
-  );
-  switch (command.toLowerCase()) {
+console.log(
+  "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit): "
+);
+let arg;
+//input = "add cat";
+mainLoop: while (true) {
+  let input = prompt("> ");
+  command = input.split(" ")[0].toLowerCase().trim();
+  switch (command) {
     case "exit":
       console.log("Goodbye!");
-      break;
+      break mainLoop; // ✅ this breaks the while loop
     case "help":
       commandsPrinting();
       break;
-    case "addWord":
-      addWord();
+    case "add":
+      if (!input.split(" ")[1]) {
+        console.log("Enter an argument. add + <word>");
+        break;
+      }
+      arg = input.split(" ")[1].toLowerCase().trim();
+      parent.addWord(arg);
       break;
   }
 }
+
+module.exports = Node;
