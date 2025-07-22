@@ -8,23 +8,16 @@ class Node {
   }
 
   addChild(child) {
-    letter = child.letter;
+    const letter = child.letter;
     this.childs[letter] = child;
   }
 
   getChild(letter) {
     return this.childs[letter];
   }
-  addWord(word) {
-    if (!word || typeof word !== "string") {
-      console.log("Not a valid word.");
-      return false;
-    }
 
-    if (!/^[a-zA-Z]+$/.test(word)) {
-      console.log("Word must contain only letters.");
-      return false;
-    }
+  addWord(word) {
+    if (!this.wordValidation(word)) return false;
     let current = this;
     for (let letter of word) {
       if (!current.childs.hasOwnProperty(letter)) {
@@ -34,6 +27,69 @@ class Node {
     }
     current.endOfWord = true; // Marking the last letter
     console.log(`Added ${word} to dictionary`);
+    return true;
+  }
+
+  findWord(word) {
+    let current = this;
+    for (let letter of word) {
+      if (!current.childs.hasOwnProperty(letter)) {
+        console.log(`✗ ${word} not found in dictionary`);
+        return false;
+      }
+      if (current.endOfWord === true) {
+        console.log(`✓ ${word} exists in dictionary`);
+        return true;
+      }
+      current = current.childs[letter];
+    }
+    return false;
+  }
+
+  wordValidation(word) {
+    if (!word || typeof word !== "string") {
+      console.log("Not a valid word.");
+      return false;
+    }
+
+    if (!/^[a-zA-Z]+$/.test(word)) {
+      console.log("Word must contain only letters.");
+      return false;
+    }
+    return true;
+  }
+  predictWords(prefix) {
+    if (!this.wordValidation(prefix)) return false;
+
+    let current = this;
+    for (let letter of prefix) {
+      if (!current.childs.hasOwnProperty(letter)) {
+        console.log(`✗ Prefix '${prefix}' not found.`);
+        return false;
+      }
+      current = current.childs[letter];
+    }
+
+    const predictions = [];
+
+    function dfs(node, path) {
+      if (node.endOfWord) {
+        predictions.push(prefix + path);
+      }
+
+      for (let childLetter in node.childs) {
+        dfs(node.childs[childLetter], path + childLetter);
+      }
+    }
+
+    dfs(current, "");
+    if (predictions.length === 0) {
+      console.log(`✓ No completions found for '${prefix}'`);
+    } else {
+      console.log(`✓ Completions for '${prefix}': ${predictions.join(", ")}`);
+    }
+
+    return predictions;
   }
 }
 
@@ -46,31 +102,38 @@ function commandsPrinting() {
   console.log("exit              - Quit program");
 }
 
+console.log(
+  "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit):"
+);
+
 const parent = new Node();
 parent.addWord("cat");
-console.log(
-  "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit): "
-);
-let arg;
-//input = "add cat";
-mainLoop: while (true) {
-  let input = prompt("> ");
-  command = input.split(" ")[0].toLowerCase().trim();
-  switch (command) {
-    case "exit":
-      console.log("Goodbye!");
-      break mainLoop; // ✅ this breaks the while loop
-    case "help":
-      commandsPrinting();
-      break;
-    case "add":
-      if (!input.split(" ")[1]) {
-        console.log("Enter an argument. add + <word>");
+
+if (require.main === module) {
+  while (true) {
+    const input = prompt("> ");
+    const command = input.split(" ")[0].toLowerCase().trim();
+
+    switch (command) {
+      case "exit":
+        console.log("Goodbye!");
         break;
-      }
-      arg = input.split(" ")[1].toLowerCase().trim();
-      parent.addWord(arg);
-      break;
+      case "help":
+        commandsPrinting();
+        continue;
+      case "add":
+        const arg = input.split(" ")[1]?.toLowerCase().trim();
+        if (!arg) {
+          console.log("Enter an argument. add + <word>");
+          continue;
+        }
+        parent.addWord(arg);
+        continue;
+      default:
+        console.log("Unknown command. Type 'help' for options.");
+        continue;
+    }
+    break;
   }
 }
 
