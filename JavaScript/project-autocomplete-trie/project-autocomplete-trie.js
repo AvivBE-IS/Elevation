@@ -15,6 +15,16 @@ class Node {
   getChild(letter) {
     return this.childs[letter];
   }
+  addWord(word) {
+    let current = this;
+    for (let letter of word) {
+      if (!current.childs.hasOwnProperty(letter)) {
+        current.childs[letter] = new Node(letter);
+      }
+      current = current.childs[letter];
+    }
+    current.endOfWord = true; // Marking the last letter
+  }
 }
 
 function commandsPrinting() {
@@ -27,7 +37,7 @@ function commandsPrinting() {
 }
 
 const parent = new Node();
-//onst node = new Node('e', true);
+parent.addWord("cat");
 
 while (true) {
   let command = prompt(
@@ -39,5 +49,9 @@ while (true) {
       break;
     case "help":
       commandsPrinting();
+      break;
+    case "addWord":
+      addWord();
+      break;
   }
 }
