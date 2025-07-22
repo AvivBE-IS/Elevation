@@ -16,6 +16,15 @@ class Node {
     return this.childs[letter];
   }
   addWord(word) {
+    if (!word || typeof word !== "string") {
+      console.log("Not a valid word.");
+      return false;
+    }
+
+    if (!/^[a-zA-Z]+$/.test(word)) {
+      console.log("Word must contain only letters.");
+      return false;
+    }
     let current = this;
     for (let letter of word) {
       if (!current.childs.hasOwnProperty(letter)) {
@@ -39,7 +48,7 @@ function commandsPrinting() {
 const parent = new Node();
 parent.addWord("cat");
 
-while (true) {
+while (command !== "exit") {
   let command = prompt(
     "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit): "
   );
