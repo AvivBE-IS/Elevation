@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex4</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <label for="name">Name</label>
+      <input type="text" class="txt" id="name" />
+
+      <div class="row">
+        <div style="flex: 1">
+          <label for="salary">Desired Salary</label>
+          <input type="text" class="txt" id="salary" />
+        </div>
+        <div style="flex: 1">
+          <label for="birthday">Birthday</label>
+          <input type="text" class="txt" id="birthday" />
+        </div>
+      </div>
+
+      <label for="phone">Phone</label>
+      <input type="text" class="txt" id="phone" />
+
+      <button id="btn" onclick="validate()">Submit</button>
+      <div id="textDiv">
+        <p></p>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
