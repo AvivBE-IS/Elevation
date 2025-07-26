@@ -99,7 +99,9 @@ function enterWord() {
   console.log("input=" + input);
   const word = input.value.trim();
   if (!word) {
-    alert("Please enter a word.");
+    // alert("✗ Cannot add an empty word.");
+    const successDiv = document.getElementById("successDiv");
+    successMsg(word);
     return;
   }
   trie.addWord(word);
@@ -120,20 +122,39 @@ const successMsg = function (word) {
   const successDiv = document.getElementById("successDiv");
   console.log("webCnt=" + successDiv);
   successDiv.style.visibility = "visible";
-  successDiv.placeholder = `✓ Added '${word}' to dictionary`;
+  if (word) {
+    successDiv.placeholder = `✓ Added '${word}' to dictionary`;
+    successDiv.style.backgroundColor = "rgb(198,246,213)";
+    successDiv.style.borderColor = "rgb(182,238,200)";
+  } else {
+    successDiv.placeholder = "✗ Cannot add an empty word.";
+    successDiv.style.backgroundColor = "rgb(254, 215, 215)";
+    successDiv.style.borderColor = "rgb(253, 209, 209)";
+  }
 };
 const liveSuggestions = function () {
   const userInput = document.getElementById("suggestTxt");
   console.log("userInput " + userInput.value);
   const words = trie.predictWords(userInput.value);
-  console.log(words);
-  if (words.length > 0) showSuggetions(words);
+  console.log("words=" + words);
+  showSuggetions(words);
 };
 
 const showSuggetions = function (words) {
   const insideDiv = document.getElementById("insideDiv");
-  insideDiv.style.visibility = "visible";
   const suggestionsList = document.getElementById("suggestionsList");
+  const userInput = document.getElementById("suggestTxt");
+
+  suggestionsList.innerHTML = "";
+  if (userInput.value === "") {
+    console.log("input empty");
+    insideDiv.style.visibility = "hidden";
+
+    return true;
+  }
+  if (!words) return true;
+  insideDiv.style.visibility = "visible";
+
   for (let word of words) {
     const newSuggestion = document.createElement("li");
     newSuggestion.textContent = word;
