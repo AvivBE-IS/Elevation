@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#headDiv {
+  justify-content: center;
+  height: auto;
+  padding: 3vh;
+}
+
+.div {
+  width: 100vh;
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  padding: 4vh;
+}
+
+/* #successDiv {
+  border: 0.3vh solid #b6ecc9;
+  border-radius: 5px;
+  background-color: rgb(198, 246, 213);
+  width: 90vh;
+  visibility: hidden; 
+} */
+
+#successDiv {
+  border: 0.3vh solid #b6ecc9;
+  border-radius: 5px;
+  background-color: rgb(198, 246, 213);
+  width: 100vh;
+  visibility: hidden;
+}
+
+#bottonDiv {
+  width: 95vh;
+  max-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 6vh;
+}
+
+#btn.txt {
+  border-radius: 8px;
+}
+
+#addWordTxt {
+  width: 68vh;
+  max-height: 6vh;
+  border-radius: 7px;
+  border: 2px solid rgb(230, 235, 241);
+}
+
+#suggestTxt {
+  width: 100vh;
+  max-height: 6vh;
+  border-radius: 7px;
+  border: 2px solid rgb(230, 235, 241);
+}
+
+#btn {
+  width: 30vh;
+  max-height: 6.5vh;
+  background-color: rgb(102, 126, 234);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+}
+
+#bottonDiv > h1 {
+  color: rgb(102, 126, 234);
+}
+
+#suggestionDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#insideDiv {
+  border-left: 2px solid rgb(230, 235, 241);
+  border-right: 2px solid rgb(230, 235, 241);
+  border-bottom: 2px solid rgb(230, 235, 241);
+  border-top: none; /* Explicitly no top border */
+  border-radius: 0 0 7px 7px; /* Rounded bottom only */
+  height: auto;
+  width: auto;
+  visibility: unvisible;
+}
+
+#suggestionsList {
+  list-style: none;
+}

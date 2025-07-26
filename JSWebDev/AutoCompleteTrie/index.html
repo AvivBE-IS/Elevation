@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutocompleteTrie</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="headDiv" class="div">
+        <h1>Autocomplete Trie</h1>
+      </div>
+      <div id="mainDiv" class="div">
+        <input
+          type="text"
+          placeholder=" Enter a word to add to dictionary"
+          id="addWordTxt"
+          class="txt"
+        />
+        <button id="btn" onclick="enterWord()">Add Word</button>
+      </div>
+      <!-- <div id="successDiv" class="div"></div> -->
+      <input type="text" disabled id="successDiv" />
+      <div id="suggestionDiv" class="div">
+        <input
+          type="text"
+          placeholder=" Start typing to see suggestions.."
+          oninput="liveSuggestions()"
+          id="suggestTxt"
+          class="txt"
+        />
+        <div id="insideDiv">
+          <ul id="suggestionsList"></ul>
+        </div>
+      </div>
+      <div id="bottonDiv" class="div">
+        <h1 id="webCnt">0</h1>
+        <h4>Words in dictionary</h4>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
