@@ -1,6 +1,4 @@
-const prompt = require("prompt-sync")();
-
-class Node {
+export class Node {
   constructor(letter, endOfWord = false) {
     this.letter = letter;
     this.endOfWord = endOfWord;
@@ -106,35 +104,47 @@ console.log(
   "=== AutoComplete Trie Console ===\nType 'help' for commands (or 'exit' to quit):"
 );
 
-const parent = new Node();
-parent.addWord("cat");
-
-if (require.main === module) {
-  while (true) {
-    const input = prompt("> ");
-    const command = input.split(" ")[0].toLowerCase().trim();
-
-    switch (command) {
-      case "exit":
-        console.log("Goodbye!");
-        break;
-      case "help":
-        commandsPrinting();
-        continue;
-      case "add":
-        const arg = input.split(" ")[1]?.toLowerCase().trim();
-        if (!arg) {
-          console.log("Enter an argument. add + <word>");
-          continue;
-        }
-        parent.addWord(arg);
-        continue;
-      default:
-        console.log("Unknown command. Type 'help' for options.");
-        continue;
-    }
-    break;
+export function enterWord() {
+  const input = document.getElementById("addWordTxt");
+  const word = input.value.trim();
+  if (!word) {
+    alert("Please enter a word.");
+    return;
   }
+  // TODO: Add logic to insert the word into your trie here
+  alert(`Word "${word}" added!`);
+  input.value = "";
 }
+window.enterWord = enterWord;
+export { Node, enterWord };
 
-module.exports = Node;
+// const parent = new Node();
+// parent.addWord("cat");
+
+// if (require.main === module) {
+//   while (true) {
+//     const input = prompt("> ");
+//     const command = input.split(" ")[0].toLowerCase().trim();
+
+//     switch (command) {
+//       case "exit":
+//         console.log("Goodbye!");
+//         break;
+//       case "help":
+//         commandsPrinting();
+//         continue;
+//       case "add":
+//         const arg = input.split(" ")[1]?.toLowerCase().trim();
+//         if (!arg) {
+//           console.log("Enter an argument. add + <word>");
+//           continue;
+//         }
+//         parent.addWord(arg);
+//         continue;
+//       default:
+//         console.log("Unknown command. Type 'help' for options.");
+//         continue;
+//     }
+//     break;
+//   }
+// }

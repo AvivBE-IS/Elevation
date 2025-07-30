@@ -1,15 +1,28 @@
 git init
-ls -a
-git status
-git add
-git commit -m <str>
-git log
+git clone
+
 git add .
-git remote add origin <YOUR_URL>
+git commit -m <str>
+git push (default: current branch)(avalible: origin master)
+
+git status -> Did you add?
+git remote -v -> Does local code connect to GitHub?
+git remote add origin <YOUR_URL>  -> adding an URL
+
+branches
+git branch
+git checkout -b branch-name
+git push origin branch-name_
+git checkout branch-name
+git merge <branch-name>
+
+
+
+git ls -a
+git log
 git push origin master
 git diff
 git remote -v (the url's repo)
 git checkout -b server-backup (opening a new branch- don't work on master)
 git push origin
-git branch
 git pull origin master

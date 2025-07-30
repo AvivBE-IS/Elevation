@@ -1,4 +1,4 @@
-const Node = require("./project-autocomplete-trie");
+import Node from "./project-autocomplete-trie";
 
 describe("Trie (Node)", () => {
   let root;
