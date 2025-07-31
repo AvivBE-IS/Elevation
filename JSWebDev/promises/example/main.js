@@ -1,17 +1,24 @@
-const getRandomWord = function () {
-  let words = [
-    "Bonanza",
-    "Elusive",
-    "Hindrance",
-    "Astute",
-    "Polaroid",
-    "Phonic",
-    "Yonder",
-  ];
+getRandomWord((randomWord) => {
+  console.log(`Random Word: ${randomWord}`);
 
-  // using setTimeout to simulate an async operation that takes time
-  setTimeout(() => {
-    return words[Math.floor(Math.random() * words.length)];
-  }, 1000);
-};
-console.log(getRandomWord());
+  getSynonyms(randomWord, (synonyms) => {
+    console.log(`Synonyms of ${randomWord}:`, synonyms);
+    let synonym = synonyms[0]; // Use the first synonym
+
+    getSentiment(synonym, (sentiment) => {
+      let sentimentDescription = getSentimentDescription(sentiment);
+      console.log(
+        `Sentiment of "${synonym}" (Synonym of ${randomWord}): ${sentimentDescription}`
+      );
+    });
+  });
+});
+
+getRandomWord()
+  .then((word) => {
+    return getSynonyms(word);
+  })
+  .then((synonym) => {
+    return getSentiment(synonym, sentiment);
+  })
+  .then();

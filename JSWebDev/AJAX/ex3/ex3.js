@@ -4,9 +4,11 @@ const fetch = function (queryType, queryValue) {
     `https://www.googleapis.com/books/v1/volumes?q=${queryParam}`,
     function (data) {
       if (data.items && data.items.length > 0) {
+        data.items.forEach((item) => {});
         console.log("title= " + data.items[0].volumeInfo.title);
         for (let author of data.items[0].volumeInfo.authors)
           console.log(author);
+        console.log(industryIdentifiers);
       } else {
         console.log("No results found.");
       }
