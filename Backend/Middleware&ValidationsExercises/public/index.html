@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Middleware & Validations Exercises</title>
+    <link rel="stylesheet" href="/app/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Middleware & Validations Exercises</h1>
+
+      <section id="ex1">
+        <h2>Exercise 1</h2>
+        <button id="ping-root">GET /</button>
+        <button id="ping-about">GET /about</button>
+        <pre id="ex1-out"></pre>
+      </section>
+
+      <section id="ex2">
+        <h2>Exercise 2</h2>
+        <button id="get-users">GET /users</button>
+        <input id="user-id" type="text" placeholder="id (e.g. 1 or abc)" />
+        <button id="get-user">GET /users/:id</button>
+        <input id="new-user-name" type="text" placeholder="new user name" />
+        <button id="create-user">POST /users</button>
+        <pre id="ex2-out"></pre>
+      </section>
+
+      <section id="ex3">
+        <h2>Exercise 3</h2>
+        <h3>Create Post</h3>
+        <input id="post-title" type="text" placeholder="title" />
+        <textarea id="post-content" placeholder="content"></textarea>
+        <input
+          id="post-tags"
+          type="text"
+          placeholder='tags CSV (e.g. "js,node")'
+        />
+        <button id="create-post">POST /posts</button>
+
+        <h3>List Posts</h3>
+        <button id="list-posts">GET /posts</button>
+
+        <h3>Add Comment</h3>
+        <input id="comment-post-id" type="number" placeholder="postId" />
+        <input id="comment-email" type="email" placeholder="email" />
+        <input id="comment-content" type="text" placeholder="content" />
+        <button id="add-comment">POST /posts/:postId/comments</button>
+
+        <h3>List Comments</h3>
+        <input id="comments-post-id" type="number" placeholder="postId" />
+        <button id="list-comments">GET /posts/:postId/comments</button>
+
+        <pre id="ex3-out"></pre>
+      </section>
+    </main>
+
+    <script src="/app/main.js" type="module"></script>
+  </body>
+</html>
